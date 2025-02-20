@@ -95,7 +95,7 @@
                 let userMessage = document.getElementById("message").value;
 
                 //connect
-                fetch("https://api.render.com/deploy/srv-cur7vflumphs73ed2r3g?key=MbQFbOoOxYI", {  // backend website/location
+                fetch("https://website-private-backend.onrender.com", {  // backend website/location
                     method: "POST",
                     headers: { "Content-Type" : "application/json"},
                     body: JSON.stringify({ message : userMessage })
