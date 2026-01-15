@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Leonardo Lin</title>
+<link rel="icon" type="image/x-icon" href="user.ico">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<h1 class="title">
+Leonardo Lin
+</h1>
+<h2 style="color:green;">Legend:</h2>
+<p> 1. 
+<b> <a href="#introduction">Introduction</a></b><br>2. 
+<b> <a href="#education">Education</a></b><br>3. 
+<b> <a href="#projects">Projects</a></b><br>4. 
+<b> <a href="#skills">Skills</a></b><br>5. 
+<b> <a href="#contact">Contact</a></b><br>6. 
+<b> <a href="#comments">Comments</a></b>
+<br>
+<hr>
+</p>
+<h1 id="introduction">
+INTRODUCTION:
+</h1>
+<p>
+My name is Leonardo Lin, and I am currently studying Computer Science at Indiana University Bloomington. I have a strong interest in computer algorithms and problem-solving methods. I am skilled in several programming languages, software development, and system design. Additionally, I speak multiple languages, including English, Italian, Chinese, and French. I am passionate about solving problems using different programming languages.
+</p>
+<p></p>
+<hr>
+<h1 id ="education">
+EDUCATION:
+</h1>
+<h4>HIGH SCHOOL:</h4>
+<p>
+I attended Blyth Academy Florence in Florence, where I started in 2019 and graduated in June 2023. During my time at school, I joined the Physics, Chemistry, and Volleyball clubs. Additionally, I co-founded the Computing Club and tutored for over 100 hours in subjects such as Algebra, Physics, Pre-Calculus, and Chemistry.
+</p>
+<h4>COLLEGE:</h4>
+<p>
+I enrolled at Indiana University Bloomington in 2023, majoring in Computer Science with a minor in Mathematics. I conducted a research project with Professor James Glazier, focusing on problem-solving in environments for simulating biocomplexity problems using CompuCell3D. Additionally, my current GPA is 3.98/4.00.
+</p>
+<hr>
+<h1 id ="projects">
+PROJECTS:
+</h1>
+<p>
+<a href="https://github.com/Lighttukko/cc3d-twedit5">1. CompuCell3D Research Project</a>
+<br><a href="https://github.com/Lighttukko/Raspbery-Pi-project">2. Coded for Raspberry PI Functionality</a> 
+<br><a href="https://github.com/Lighttukko/personal-projects">3. Little Projects</a>
+<br>
+</p>
+<hr>
+<h1 id="skills">
+SKILLS:
+</h1>
+<h4>Programming Languages:</h4>
+<p>
+C++, Java, Python, HTML/CSS, XML, C, R, and Javascript.
+</p>
+<h4>Soft Skills:</h4>
+<p>
+Problem Solving, Critical Thinking, Time Management, Teamwork and Collaboration, and Communication.
+</p>
+<hr>
+<h1 id="contact">
+CONTACT:
+</h1>
+<p>
+Email at <a href="mailto:Leonardolin9943@gmail.com">Leonardolin9943@gmail.com</a><br>
+Phone Numbers: +1 8126068643, +39 3498263972, +86 15088922771<br>
+Github: <a href="https://github.com/Lighttukko">Here</a> or by link <b>https://github.com/Lighttukko</b><br>
+</p>
+<hr>
+<h1 id="comments">
+COMMENTS:
+</h1>
+<p>
+Leave a Message or Inquiries:
+
+<form id="messageForm">
+<textarea id="message" placeholder="Write your message here" rows="5" cols="80"></textarea>
+<br><br>
+<button type="button" onclick="submitMessage()">Submit</button>
+</form>
+
+   <script>
+	function submitMessage() {
+            // Get the message entered by the user
+            const userMessage = document.getElementById("message").value;
+
+            // Send the message to the Flask backend using fetch
+            fetch("http://127.0.0.1:5000/submit", {  // Update this URL when deploying online
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ message: userMessage })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);  // Show the response message (success or failure)
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Failed to send message.");
+            });
+        }
+    </script>
+
+</p>
+
+</body>
+</html>
