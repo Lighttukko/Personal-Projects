@@ -16,6 +16,7 @@ public class Reporter implements Visitor {
             lines.add(line); 
             return new Displaux( lines, width, height, middle ); 
         }
+        
         if (node.right == null) { 
             Displaux result = this.displaux(node.left); 
             ArrayList<String> lines = result.lines; 

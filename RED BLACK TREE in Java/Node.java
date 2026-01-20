@@ -17,6 +17,7 @@ public class Node {
     v.visitNode(this);
   }
 
+  
   // public Node delete(int num){
   //   //when it does not exist.
   //   if (!this.find(num)){

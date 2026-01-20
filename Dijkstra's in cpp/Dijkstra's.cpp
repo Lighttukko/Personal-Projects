@@ -13,12 +13,12 @@ class Graph{
             for (int x = 0; x < total; ++x){
                 this->matrix[x] = new int[total];
             }
+
             for (int x = 0; x < total; ++x){
                 for (int y = 0; y < total; ++y){
                     this->matrix[x][y] = 0;
                 }
             }
-
         }
 
         int finder(char letter){
